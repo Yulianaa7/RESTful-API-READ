@@ -17,9 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/pelanggan', 'PelangganController@show');
+Route::get('/pelanggan/{id_pelanggan}', 'PelangganController@detail');
 Route::post('/pelanggan', 'PelangganController@store');
 
 Route::get('/produk', 'ProdukController@show');
+Route::get('/produk/{id_produk}', 'ProdukController@detail');
 Route::post('/produk', 'ProdukController@store');
 
 Route::get('/transaksi', 'TransaksiController@show');
